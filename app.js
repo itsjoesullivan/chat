@@ -137,7 +137,7 @@ var App = Backbone.Model.extend({
 		// Global for checking out if so inclined
 		window.chatServer = new ChatServer();
 
-		// Instanciate chats... normally just one
+		// Instantiate chats... normally just one
 		window.chatters = [
 			new Chat({ author: "John" /* Cusack */ , server: chatServer }), 
 			new Chat({ author: "Joan" /* Cusack */ , server: chatServer})
