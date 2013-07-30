@@ -99,7 +99,7 @@ var ChatView = Backbone.View.extend({
 		return this;
 	},
 	events: {
-		"submit": "addMessage"
+		"submit": "addMessage" //FIXME: "return" doesn't seem to submit in IE
 	},
 	addMessage: function(e) {
 		// Kill the form
