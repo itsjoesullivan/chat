@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<link rel='stylesheet' href="style.css" />
+<script id="view-chat" type="text/template">
+<h2 class="chat-name"><%= name %></h2>
+<div class="messages-container"></div>
+<form class="message-input">
+	<input type="text" name="content" />
+	<input type="hidden" name="author" value="<%= author %>" />
+	<!-- input type="submit" value="Send" /-->
+</form>
+</script>
+</head>
+<body>
+<div id="app"></div>
+<script src="lib/jquery.js"></script>
+<script src="lib/jquery.serializeObject.js"></script>
+<script src="lib/underscore.js"></script>
+<script src="lib/backbone.js"></script>
+<script src="app.js"></script>
+</body>
