@@ -68,7 +68,6 @@ var MessagesView = Backbone.View.extend({
 	className: 'messages',
 	tagName: 'ul',
 	addMessage: function(message) {
-		console.log(message);
 		var messageView = new MessageView({ model: message });
 		$(this.el)
 			.append(messageView.render().el)
@@ -118,13 +117,14 @@ var ChatView = Backbone.View.extend({
 		// Listen to the "server"
 		this.model.get('server').get('messages').on('add', function(message) {
 
-
+			// TODO: put this in MessageView; message first needs to know author/id
 			var messageObj = message.toJSON();
 			if(messageObj.author === this.model.get("author")) {
 				messageObj.author = "Me"; // You??
 			}
-			console.log(message);
+
 			this.model.get('messages').add(messageObj);
+
 		}, this);
 
 	}
